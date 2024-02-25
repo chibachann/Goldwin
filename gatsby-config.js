@@ -6,5 +6,15 @@ module.exports = {
     title: `goldwin-web-store`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  
+plugins: [
+  {
+    resolve: "gatsby-plugin-react-svg",
+    options: {
+      rule: {
+        include: /images/ // See below to configure properly
+      }
+    }
+  }
+],
 }
