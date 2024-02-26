@@ -1,7 +1,6 @@
 # Web模倣
-## 参考サイト
-GOLDWIN WEB STORE
-URL: https://www.goldwin.co.jp/store/
+## 現在のページ
+![alt text](image.png)
 
 ## 構成
 シンプルで見やすいECサイト。スタイリッシュで参考になると感じている。
