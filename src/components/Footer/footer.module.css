@@ -7,28 +7,105 @@
   
   .footerContent {
     display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    padding: 20px;
+    justify-content: space-between; /* 要素をスペースで均等に分散 */
   }
+  
+  .leftSection {
+    flex: 1; /* 左セクションに柔軟な空間を与える */
+    margin-right: 20px;
+  }
+  
+  .rightSection {
+    flex: 1; /* 右セクションにより多くの空間を与える */
+    display: flex;
+    justify-content: space-around; /* 要素間にスペースを均等に配置 */
+  }
+  
+
+  .footerWebsiteTitle {
+    font-size: 26px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+  }
+
+  .socialIconsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* 左揃えに変更 */
+    gap: 10px; /* アイコン間の間隔 */
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  
+  .socialIcon {
+    width: 32px; /* アイコンの幅 */
+    height: 32px; /* アイコンの高さ */
+    margin-right: 30px;
+  }
+
+  /* 最後のアイコンにはmargin-rightを適用しない */
+  .socialIcon:last-child {
+    margin-right: 0;
+  }
+  
   
   .footerSectionTitle {
-    margin-bottom: 10px;
-  }
-  
-  .footerSectionText {
-    margin-bottom: 5px;
+    margin-bottom: 20px;
   }
   
   .footerBottom {
-    text-align: center;
-    margin-top: 20px;
+    display: flex;
+    justify-content: space-between; /* 左右の要素を画面の端に配置 */
+    align-items: center;
+    padding: 20px; /* 上下左右にパディングを追加 */
+    font-size: 0.75rem; /* 文字サイズを小さく設定 */
+    color: #9d9d9d; /* 文字色を灰色に設定 */
+  }
+
+  .subSection {
+    display: flex;
+    flex-direction: column; /* サブセクションの要素を縦に並べる */
   }
   
-  .socialIcons {
-    color: #fff;
-    margin: 0 10px;
+  .footerLinks {
+    display: flex;
+    flex-direction: row; /* 要素を横に並べる */
+    gap: 10px; /* 要素間の間隔 */
+    align-items: center;
+  }
+
+  .footerBottomLinkItem{
+    position: relative;
+    cursor: pointer;
     text-decoration: none;
-    font-size: 24px;
+    width: max-content;
+    color: inherit;
+    display: block; /* 下線の幅をコンテンツに合わせるために変更 */
   }
   
+  .footerLinkItem {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-decoration: none;
+    width: max-content;
+    color: inherit;
+    display: block; /* 下線の幅をコンテンツに合わせるために変更 */
+  }
+  
+  .footerLinkItem::after {
+    content: '';
+    position: absolute;
+    width: 100%; /* テキスト幅に合わせる */
+    height: 2px;
+    bottom: -2px; /* 下線の位置を微調整 */
+    left: 0;
+    background-color: #9d9d9d;
+    transform: scaleX(0); /* 初期状態でのスケールを0に設定 */
+    transition: transform 0.3s ease-in-out; /* transformに対するトランジションを適用 */
+    transform-origin: bottom left; /* スケール変化の原点を左側に設定 */
+  }
+  
+  .footerLinkItem:hover::after {
+    transform: scaleX(1); /* ホバー時にスケールを1に設定 */
+  }
