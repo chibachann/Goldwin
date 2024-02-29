@@ -1,111 +1,187 @@
+:root {
+  --footer-background-color: #2A292F;
+  --footer-text-color: #fff;
+  --footer-link-color: #9d9d9d;
+  --footer-padding-horizontal: 30px;
+  --footer-icon-gap: 30px;
+  --footer-icon-size: 32px;
+  --footer-icon-size-mobile: 28px;
+  --footer-icon-gap-mobile: 10px;
+}
+
 .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    font-size: 14px;
-  }
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
+  padding: 20px 0;
+  font-size: 14px;
+}
   
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftSection {
+  flex: 1; 
+  margin-right: 20px;
+}
+  
+.rightSection {
+  flex: 1; 
+  display: flex;
+  justify-content: space-around; 
+}
+  
+.footerWebsiteTitle {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-left: var(--footer-padding-horizontal);
+  text-decoration: none;
+  color: inherit;
+}
+
+.socialIconsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--footer-icon-gap);
+  margin-top: 30px;
+  margin-left: var(--footer-padding-horizontal);
+}
+  
+.socialIcon {
+  width: var(--footer-icon-size); 
+  height: var(--footer-icon-size); 
+  margin-right: var(--footer-icon-gap);
+}
+
+
+.socialIcon:last-child {
+  margin-right: 0;
+}
+  
+  
+.footerSectionTitle {
+  margin-bottom: 20px;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 0.75rem;
+  color: var(--footer-link-color);
+}
+  
+.footerLinks {
+  display: flex;
+  flex-direction: row; 
+  gap: 10px; 
+  align-items: center;
+}
+
+.footerLinkItem, .footerBottomLinkItem {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  width: max-content;
+  color: inherit;
+  display: block;
+}
+
+.footerLinkItem {
+  margin-bottom: 10px; 
+}
+
+.footerLinkItem::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--footer-link-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom left;
+}
+  
+.footerLinkItem:hover::after {
+  transform: scaleX(1);
+}
+
+
+@media (max-width: 1024px) {
+
   .footerContent {
     display: flex;
-    justify-content: space-between; /* 要素をスペースで均等に分散 */
+    justify-content: flex-start;
+    flex-direction: column;
   }
-  
-  .leftSection {
-    flex: 1; /* 左セクションに柔軟な空間を与える */
-    margin-right: 20px;
-  }
-  
-  .rightSection {
-    flex: 1; /* 右セクションにより多くの空間を与える */
-    display: flex;
-    justify-content: space-around; /* 要素間にスペースを均等に配置 */
-  }
-  
 
   .footerWebsiteTitle {
-    font-size: 26px;
-    margin-bottom: 10px;
-    margin-left: 30px;
+    font-size: 18px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: inherit;
   }
 
   .socialIconsContainer {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* 左揃えに変更 */
-    gap: 10px; /* アイコン間の間隔 */
-    margin-top: 30px;
-    margin-left: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
   }
   
-  .socialIcon {
-    width: 32px; /* アイコンの幅 */
-    height: 32px; /* アイコンの高さ */
-    margin-right: 30px;
-  }
-
-  /* 最後のアイコンにはmargin-rightを適用しない */
-  .socialIcon:last-child {
+  .leftSection {
     margin-right: 0;
   }
-  
-  
-  .footerSectionTitle {
-    margin-bottom: 20px;
-  }
-  
-  .footerBottom {
-    display: flex;
-    justify-content: space-between; /* 左右の要素を画面の端に配置 */
-    align-items: center;
-    padding: 20px; /* 上下左右にパディングを追加 */
-    font-size: 0.75rem; /* 文字サイズを小さく設定 */
-    color: #9d9d9d; /* 文字色を灰色に設定 */
-  }
 
+  .rightSection {
+    flex-direction: column;
+    width: 100%;
+  }
   .subSection {
-    display: flex;
-    flex-direction: column; /* サブセクションの要素を縦に並べる */
-  }
-  
-  .footerLinks {
-    display: flex;
-    flex-direction: row; /* 要素を横に並べる */
-    gap: 10px; /* 要素間の間隔 */
-    align-items: center;
+    width: 100%;
   }
 
-  .footerBottomLinkItem{
-    position: relative;
-    cursor: pointer;
-    text-decoration: none;
-    width: max-content;
-    color: inherit;
-    display: block; /* 下線の幅をコンテンツに合わせるために変更 */
-  }
-  
-  .footerLinkItem {
-    position: relative;
-    cursor: pointer;
+  .footerSectionTitle {
+    font-size: 16px;
+    margin-left: 20px;
     margin-bottom: 10px;
-    text-decoration: none;
-    width: max-content;
-    color: inherit;
-    display: block; /* 下線の幅をコンテンツに合わせるために変更 */
+  }
+
+  .footerLinkItem {
+    width: 100%;
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    border-bottom: 1px solid #6e6e6e;
+  }
+
+  .socialIcon {
+    width: var(--footer-icon-size-mobile); 
+    height: var(--footer-icon-size-mobile); 
+    margin-right: var(--footer-icon-gap-mobile);
+  }
+
+  .footerBottom {
+    flex-direction: column; 
+    align-items: flex-start; 
+    
+  }
+
+  .footerLinks {
+    flex-direction: column; 
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #fff;
+  }
+  .footerLinkItem::after, .footerBottomLinkItem::after {
+    display: none; 
   }
   
-  .footerLinkItem::after {
-    content: '';
-    position: absolute;
-    width: 100%; /* テキスト幅に合わせる */
-    height: 2px;
-    bottom: -2px; /* 下線の位置を微調整 */
-    left: 0;
-    background-color: #9d9d9d;
-    transform: scaleX(0); /* 初期状態でのスケールを0に設定 */
-    transition: transform 0.3s ease-in-out; /* transformに対するトランジションを適用 */
-    transform-origin: bottom left; /* スケール変化の原点を左側に設定 */
-  }
-  
-  .footerLinkItem:hover::after {
-    transform: scaleX(1); /* ホバー時にスケールを1に設定 */
-  }
+}

@@ -1,26 +1,25 @@
-.contentsTitle {
- 
- height: auto;
- padding-left: 20px;
- font-family: "Untitled Sans", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "hiragino-kaku-gothic-pron", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
- font-size: 26pt;
- font-weight: 400;
+.marqueeContainer {
+  background: rgb(42, 41, 47);
+  height: 54px;
+  width: 100%;
+  overflow: hidden
 }
 
+.marqueeText {
+  color: white;
+  transform: translateX(100%);
+  animation: marquee 10s linear infinite;
+}
 
-@keyframes slideUp {
-    from {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+@keyframes marquee {
+  0% {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
   }
-  
-  .animatedChar {
-    display: inline-block;
-    animation: slideUp 0.5s ease forwards;
-    opacity: 0; /* アニメーションが始まる前は透明 */
+  100% {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
+}

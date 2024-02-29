@@ -1,0 +1,21 @@
+/* layout.module.css */
+html, body, #___gatsby, #gatsby-focus-wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* 水平方向のスクロールバーを非表示に */
+  }
+  
+  body {
+    box-sizing: border-box; /* パディングとボーダーを幅と高さに含める */
+  }
+  
+  main {
+    display: block; /* main要素をブロックレベル要素として扱う */
+    width: 100%; /* 幅を画面いっぱいに */
+    min-height: 100vh; /* 最小の高さをビューポートの100%に */
+    padding: 20px; /* 必要に応じてパディングを調整 */
+    box-sizing: border-box; /* パディングを含む幅を指定 */
+  }
+  
