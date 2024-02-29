@@ -1,6 +1,12 @@
 # Web模倣
 ## 現在のページ
-![alt text](image.png)
+![alt text](image2.png)
+
+## 参考文献、参考資料、素材元
+- svgアイコン　https://icons8.com/icons
+- 参考サイト
+GOLDWIN WEB STORE
+URL: https://www.goldwin.co.jp/store/
 
 ## 構成
 シンプルで見やすいECサイト。スタイリッシュで参考になると感じている。
@@ -18,8 +24,13 @@
 ## 課題点
 - コンポーネント化していないので、再実装が面倒。アニメーションは確実に役に立つのでコンポーネント化したいところ。
 
-## 参考文献、参考資料、素材元
-- svgアイコン　https://icons8.com/icons
-- 参考サイト
-GOLDWIN WEB STORE
-URL: https://www.goldwin.co.jp/store/
+# 2/29
+- スライダーの追加
+- マーキーの追加途中
+- ヘッダーのアイコンを追加
+- フッターのモバイル版を追加
+
+## 課題点
+- スライダーのモバイル化
+- ハンバーガーメニュークリック時のサブメニューの実装
+- スライダーのホバーアニメーション
