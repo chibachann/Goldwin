@@ -1,6 +1,9 @@
 # Web模倣
 ## 現在のページ
-![alt text](image2.png)
+![](image2.png)
+
+モバイル版フッター
+![](image3.png)
 
 ## 参考文献、参考資料、素材元
 - svgアイコン　https://icons8.com/icons
